@@ -25,23 +25,12 @@ export default function Hero() {
             into complexity.
           </h1>
 
-          <p className="text-lg md:text-xl text-off-white/70 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-lg md:text-xl text-off-white/70 max-w-3xl mx-auto font-light leading-relaxed">
             Brilliant Platforms is a technology company advancing how critical
             systems are designed, built, and connected. From digital
             infrastructure to global resilience — we're rethinking the frameworks
             that power the world.
           </p>
-
-          <Button
-            onClick={() => {
-              document
-                .getElementById('email-capture')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }}
-            variant="primary"
-          >
-            Stay informed
-          </Button>
         </div>
       </Container>
     </section>

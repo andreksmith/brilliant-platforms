@@ -27,8 +27,8 @@ export default function Footer() {
                 Building clarity into complexity. Technology for critical systems
                 that can't afford to fail.
               </p>
-              <p className="text-xs text-off-white/40">
-                A Brilliant Company™
+              <p className="text-xs text-off-white/40 tracking-wider">
+                Est. 2024
               </p>
             </div>
 

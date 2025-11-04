@@ -3,27 +3,27 @@ import Container from './Container'
 const updates = [
   {
     date: 'Q1 2025',
-    title: 'National Crisis Coordination',
+    title: 'Crisis Coordination Systems',
     description:
-      'Deployed government-grade disaster relief platform. Multi-stakeholder coordination connecting emergency agencies with community organizations. Offline-first mobile operations achieving <60s case intake in remote areas.',
+      'Engineering government-grade disaster relief infrastructure. Multi-stakeholder coordination connecting emergency agencies with community organizations. Offline-first mobile operations targeting <60s case intake in remote areas.',
   },
   {
     date: 'Q4 2024',
-    title: 'Supply Intelligence Platform',
+    title: 'Supply Intelligence',
     description:
-      'Launched real-time product intelligence system aggregating lead time data across multiple vendors. Simulation tools for project timeline forecasting. Turning supplier fragmentation into operational clarity.',
+      'Building real-time product intelligence aggregating lead time data across vendors. Simulation tools for project timeline forecasting. Turning supplier fragmentation into operational clarity.',
   },
   {
     date: 'Q3 2024',
-    title: 'Industrial Procurement Marketplace',
+    title: 'Industrial Procurement',
     description:
-      'Shipped full lifecycle procurement platform for critical infrastructure. NDA-gated workflows, performance-based vendor analytics, milestone payments. Privacy and accountability at enterprise scale.',
+      'Architecting full lifecycle procurement for critical infrastructure. NDA-gated workflows, performance-based vendor analytics, milestone payments. Privacy and accountability at enterprise scale.',
   },
   {
     date: 'Q2 2024',
-    title: 'Offline-First Architecture',
+    title: 'Offline-First Foundation',
     description:
-      'Released production-grade offline capabilities. Service Workers, background sync, and intelligent retry. Field operations continuing without connectivity. Photo, signature, and GPS verification at point of action.',
+      'Developing production-grade offline capabilities. Service Workers, background sync, and intelligent retry. Field operations continuing without connectivity. Photo, signature, and GPS verification at point of action.',
   },
 ]
 

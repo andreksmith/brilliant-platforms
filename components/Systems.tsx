@@ -15,9 +15,9 @@ export default function Systems() {
           </p>
           <div className="space-y-4 text-lg text-off-white/60 font-light">
             <p>
-              From data center RFP marketplaces to disaster relief operations — platforms that connect the right people at the right time.
+              Platforms that connect the right people at the right time, with the information that matters most.
             </p>
-            <p>Three platforms. One philosophy: clarity from complexity.</p>
+            <p>Different systems. Different constraints. One philosophy: clarity from complexity.</p>
           </div>
         </div>
       </Container>

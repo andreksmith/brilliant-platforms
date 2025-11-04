@@ -4,7 +4,7 @@ const pillars = [
   {
     title: 'VISIBILITY',
     description:
-      'Information symmetry for industries that can\'t afford blind spots.',
+      "Information symmetry for industries that can't afford blind spots.",
   },
   {
     title: 'PRECISION',

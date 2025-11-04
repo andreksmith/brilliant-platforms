@@ -8,9 +8,7 @@ import Approach from '@/components/Approach'
 import Focus from '@/components/Focus'
 import Capabilities from '@/components/Capabilities'
 import Stats from '@/components/Stats'
-import Testimonial from '@/components/Testimonial'
 import JournalTeaser from '@/components/JournalTeaser'
-import EmailCapture from '@/components/EmailCapture'
 import Footer from '@/components/Footer'
 
 export default function HomePage() {
@@ -27,9 +25,7 @@ export default function HomePage() {
         <Capabilities />
         <Stats />
         <Systems />
-        <Testimonial />
         <JournalTeaser />
-        <EmailCapture />
       </main>
       <Footer />
     </>
