@@ -1,0 +1,45 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0B0B0C"/>
+
+  <!-- Starburst logo centered -->
+  <g transform="translate(600, 315)">
+    <!-- Radial gradient lines -->
+    <defs>
+      <radialGradient id="starburst-gradient">
+        <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.1"/>
+      </radialGradient>
+    </defs>
+
+    <!-- 16 lines radiating from center -->
+    <line x1="0" y1="0" x2="0" y2="-80" stroke="url(#starburst-gradient)" stroke-width="2"/>
+    <line x1="0" y1="0" x2="56.57" y2="-56.57" stroke="url(#starburst-gradient)" stroke-width="2"/>
+    <line x1="0" y1="0" x2="80" y2="0" stroke="url(#starburst-gradient)" stroke-width="2"/>
+    <line x1="0" y1="0" x2="56.57" y2="56.57" stroke="url(#starburst-gradient)" stroke-width="2"/>
+    <line x1="0" y1="0" x2="0" y2="80" stroke="url(#starburst-gradient)" stroke-width="2"/>
+    <line x1="0" y1="0" x2="-56.57" y2="56.57" stroke="url(#starburst-gradient)" stroke-width="2"/>
+    <line x1="0" y1="0" x2="-80" y2="0" stroke="url(#starburst-gradient)" stroke-width="2"/>
+    <line x1="0" y1="0" x2="-56.57" y2="-56.57" stroke="url(#starburst-gradient)" stroke-width="2"/>
+
+    <!-- Diagonal lines at 22.5° intervals -->
+    <line x1="0" y1="0" x2="30.52" y2="-74.31" stroke="url(#starburst-gradient)" stroke-width="1.5"/>
+    <line x1="0" y1="0" x2="74.31" y2="-30.52" stroke="url(#starburst-gradient)" stroke-width="1.5"/>
+    <line x1="0" y1="0" x2="74.31" y2="30.52" stroke="url(#starburst-gradient)" stroke-width="1.5"/>
+    <line x1="0" y1="0" x2="30.52" y2="74.31" stroke="url(#starburst-gradient)" stroke-width="1.5"/>
+    <line x1="0" y1="0" x2="-30.52" y2="74.31" stroke="url(#starburst-gradient)" stroke-width="1.5"/>
+    <line x1="0" y1="0" x2="-74.31" y2="30.52" stroke="url(#starburst-gradient)" stroke-width="1.5"/>
+    <line x1="0" y1="0" x2="-74.31" y2="-30.52" stroke="url(#starburst-gradient)" stroke-width="1.5"/>
+    <line x1="0" y1="0" x2="-30.52" y2="-74.31" stroke="url(#starburst-gradient)" stroke-width="1.5"/>
+
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="4" fill="#3B82F6"/>
+  </g>
+
+  <!-- Text -->
+  <text x="600" y="460" font-family="Inter, sans-serif" font-size="32" font-weight="300" fill="#FAFAFA" text-anchor="middle">
+    Brilliant Platforms
+  </text>
+  <text x="600" y="500" font-family="Inter, sans-serif" font-size="18" font-weight="300" fill="#FAFAFA" fill-opacity="0.6" text-anchor="middle">
+    We build clarity into complexity.
+  </text>
+</svg>
