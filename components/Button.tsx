@@ -29,12 +29,13 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    'inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-sm tracking-wide transition-smooth focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed'
+    'inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-sm tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.97]'
 
   const variants = {
-    primary: 'bg-accent text-white hover:bg-accent/90',
+    primary:
+      'bg-accent text-white hover:bg-[#2563EB] shadow-[0_1px_2px_rgba(0,0,0,0.3),0_0_0_1px_rgba(59,130,246,0.15)] hover:shadow-[0_2px_8px_rgba(59,130,246,0.2),0_0_0_1px_rgba(59,130,246,0.25)]',
     secondary:
-      'bg-transparent border border-off-white/20 text-off-white hover:bg-off-white/5',
+      'bg-transparent border border-off-white/15 text-off-white hover:bg-off-white/5 hover:border-off-white/25',
   }
 
   const classes = cn(baseStyles, variants[variant], className)

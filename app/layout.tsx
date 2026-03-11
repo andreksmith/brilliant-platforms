@@ -15,17 +15,17 @@ const plausibleDomain = process.env.PLAUSIBLE_DOMAIN
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Brilliant Platforms — We build clarity into complexity',
+    default: 'Brilliant Platforms — Technology for Data Center Infrastructure Procurement',
     template: '%s | Brilliant Platforms',
   },
   description:
-    'A technology company advancing how critical systems are designed, built, and connected. From digital infrastructure to global resilience.',
+    'Brilliant Platforms develops procurement software and media infrastructure for the data center industry.',
   keywords: [
-    'infrastructure',
-    'technology',
-    'data centers',
-    'resilience',
-    'systems',
+    'data center procurement',
+    'infrastructure technology',
+    'data center construction',
+    'equipment procurement',
+    'digital infrastructure',
   ],
   authors: [{ name: 'Brilliant Platforms' }],
   creator: 'Brilliant Platforms',
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: baseUrl,
-    title: 'Brilliant Platforms — We build clarity into complexity',
+    title: 'Brilliant Platforms — Technology for Data Center Infrastructure Procurement',
     description:
-      'A technology company advancing how critical systems are designed, built, and connected.',
+      'Brilliant Platforms develops procurement software and media infrastructure for the data center industry.',
     siteName: 'Brilliant Platforms',
     images: [
       {
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Brilliant Platforms — We build clarity into complexity',
+    title: 'Brilliant Platforms — Technology for Data Center Infrastructure Procurement',
     description:
-      'A technology company advancing how critical systems are designed, built, and connected.',
+      'Brilliant Platforms develops procurement software and media infrastructure for the data center industry.',
     images: [`${baseUrl}/og-default.svg`],
   },
   robots: {

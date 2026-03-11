@@ -1,29 +1,37 @@
 import Container from './Container'
+import Reveal from './Reveal'
 
 export default function Philosophy() {
   return (
-    <section className="py-40 bg-gradient-to-b from-black via-charcoal/30 to-black relative overflow-hidden">
+    <section className="py-32 bg-black relative overflow-hidden">
       {/* Subtle accent glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-accent/[0.03] via-transparent to-transparent" />
 
       <Container>
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <p className="text-xs text-accent/70 font-semibold tracking-widest mb-8 uppercase">
-            Our Philosophy
-          </p>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-light mb-12 tracking-tight leading-tight">
-            The infrastructure that runs the world shouldn't be guesswork.
-          </h2>
-          <div className="space-y-6 text-lg md:text-xl text-off-white/70 leading-relaxed font-light">
-            <p>
-              Critical systems demand precision. Not approximations. Not "good enough."
-              Real-time visibility, predictive intelligence, and automated resilience.
-            </p>
-            <p>
-              We're building software that turns complexity into clarity—so teams can
-              make decisions with confidence, not hope.
-            </p>
-          </div>
+        <div className="max-w-3xl relative z-10">
+          <Reveal>
+            <h2 className="text-3xl md:text-5xl font-light mb-4 tracking-tight leading-[1.1]">
+              Hundreds of millions in equipment.
+            </h2>
+            <h2 className="text-3xl md:text-5xl font-light mb-12 tracking-tight leading-[1.1] text-off-white/40">
+              Coordinated through email and spreadsheets.
+            </h2>
+          </Reveal>
+
+          <Reveal>
+            <div className="space-y-6 text-lg text-off-white/50 font-light leading-relaxed">
+              <p>
+                Data center construction programs source critical equipment — switchgear,
+                generators, cooling systems, UPS — across dozens of vendors and multi-year
+                timelines. Yet most procurement coordination still happens through email
+                threads, PDF attachments, and manual tracking.
+              </p>
+              <p className="text-off-white/60">
+                Brilliant Platforms exists because this process should have purpose-built
+                infrastructure.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </Container>
     </section>

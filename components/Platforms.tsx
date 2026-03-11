@@ -1,54 +1,60 @@
 import Container from './Container'
+import Reveal from './Reveal'
+import RevealGroup from './RevealGroup'
 
-const domains = [
+const platforms = [
   {
-    title: 'Industrial Procurement',
+    title: 'Brilliant Build',
     description:
-      "Multi-party marketplaces where visibility and accountability aren't optional. Connecting stakeholders who need precision at scale.",
+      'A procurement coordination platform for data center infrastructure equipment. Brilliant Build provides structured workflows for the teams managing scope, vendor coordination, and delivery across large-scale construction programs.',
+    badge: null,
   },
   {
-    title: 'Crisis Coordination',
+    title: 'Brilliant Media',
     description:
-      "Systems that work when connectivity fails. Platforms built for the moments when every second counts and offline isn't an excuse.",
-  },
-  {
-    title: 'Supply Intelligence',
-    description:
-      'Real-time visibility into lead times, availability, and performance. Turning fragmented supplier data into operational clarity.',
+      'Brilliant Media covers the data center infrastructure ecosystem through interviews, analysis, and industry programming.',
+    badge: 'Coming Soon',
   },
 ]
 
 export default function Platforms() {
   return (
-    <section className="py-32 bg-gradient-to-b from-black to-charcoal">
-      <Container>
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-tight">
-              Different industries. Different constraints. Same principles.
-            </h2>
-            <p className="text-xl text-off-white/60 font-light max-w-3xl mx-auto">
-              From critical infrastructure to emergency response — we build platforms
-              where failure isn't an option.
-            </p>
-          </div>
+    <section className="py-32 bg-gradient-to-b from-charcoal/50 to-black">
+      <div className="grid-line" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {domains.map((domain) => (
-              <div
-                key={domain.title}
-                className="group border border-off-white/10 rounded-lg p-8 hover:border-accent/30 transition-smooth bg-black/60"
-              >
-                <h3 className="text-2xl font-light mb-4 tracking-tight group-hover:text-accent transition-smooth">
-                  {domain.title}
+      <Container>
+        <Reveal className="mb-14 pt-8">
+          <p className="font-mono text-xs text-accent/60 tracking-[0.15em] uppercase mb-4">
+            Platform
+          </p>
+          <h2 className="text-3xl md:text-4xl font-light tracking-tight">
+            What we provide.
+          </h2>
+        </Reveal>
+
+        <RevealGroup className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl">
+          {platforms.map((platform) => (
+            <div
+              key={platform.title}
+              className="reveal-item card-system p-8 lg:p-10"
+            >
+              <div className="accent-line mb-6" />
+              <div className="flex items-center gap-3 mb-4">
+                <h3 className="text-xl font-medium tracking-tight">
+                  {platform.title}
                 </h3>
-                <p className="text-off-white/70 font-light leading-relaxed">
-                  {domain.description}
-                </p>
+                {platform.badge && (
+                  <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-accent/60 border border-accent/20 rounded px-2 py-0.5">
+                    {platform.badge}
+                  </span>
+                )}
               </div>
-            ))}
-          </div>
-        </div>
+              <p className="text-off-white/50 font-light leading-relaxed">
+                {platform.description}
+              </p>
+            </div>
+          ))}
+        </RevealGroup>
       </Container>
     </section>
   )

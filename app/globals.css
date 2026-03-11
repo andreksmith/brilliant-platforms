@@ -19,7 +19,6 @@
     @apply bg-accent/20 text-off-white;
   }
 
-  /* Focus visible styles */
   *:focus-visible {
     @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-black rounded-sm;
   }
@@ -50,23 +49,252 @@
       transparent 80%
     );
   }
+
+  /* ─── Scroll Reveal System ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal-stagger.revealed > .reveal-item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-stagger.revealed > .reveal-item:nth-child(1) { transition-delay: 0ms; }
+  .reveal-stagger.revealed > .reveal-item:nth-child(2) { transition-delay: 120ms; }
+  .reveal-stagger.revealed > .reveal-item:nth-child(3) { transition-delay: 240ms; }
+  .reveal-stagger.revealed > .reveal-item:nth-child(4) { transition-delay: 360ms; }
+  .reveal-stagger.revealed > .reveal-item:nth-child(5) { transition-delay: 480ms; }
+  .reveal-stagger.revealed > .reveal-item:nth-child(6) { transition-delay: 600ms; }
+
+  /* ─── Card System ─── */
+  .card-system {
+    background: rgba(22, 23, 26, 0.5);
+    border: 1px solid rgba(250, 250, 250, 0.06);
+    border-radius: 0.75rem;
+    transition:
+      border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .card-system:hover {
+    border-color: rgba(59, 130, 246, 0.2);
+    box-shadow:
+      0 4px 24px -4px rgba(0, 0, 0, 0.4),
+      0 0 48px -12px rgba(59, 130, 246, 0.06);
+    transform: translateY(-1px);
+  }
+
+  /* ─── Structural Elements ─── */
+  .grid-line {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(250, 250, 250, 0.06) 20%,
+      rgba(250, 250, 250, 0.06) 80%,
+      transparent
+    );
+  }
+
+  .accent-line {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      rgba(59, 130, 246, 0.3),
+      rgba(59, 130, 246, 0.05)
+    );
+    width: 48px;
+  }
+
+  /* ─── Animated Connector Lines ─── */
+  .connector-flow {
+    height: 1px;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(59, 130, 246, 0.25) 0px,
+      rgba(59, 130, 246, 0.25) 4px,
+      transparent 4px,
+      transparent 12px
+    );
+    background-size: 16px 1px;
+    animation: flow-right 1.5s linear infinite;
+  }
+
+  .connector-flow-reverse {
+    height: 1px;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(59, 130, 246, 0.25) 0px,
+      rgba(59, 130, 246, 0.25) 4px,
+      transparent 4px,
+      transparent 12px
+    );
+    background-size: 16px 1px;
+    animation: flow-left 1.5s linear infinite;
+  }
+
+  .connector-flow-down {
+    width: 1px;
+    background: repeating-linear-gradient(
+      180deg,
+      rgba(59, 130, 246, 0.25) 0px,
+      rgba(59, 130, 246, 0.25) 4px,
+      transparent 4px,
+      transparent 12px
+    );
+    background-size: 1px 16px;
+    animation: flow-down 1.5s linear infinite;
+  }
+
+  /* ─── Status Pulse ─── */
+  .status-live {
+    position: relative;
+  }
+
+  .status-live::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    background: rgba(20, 181, 122, 0.4);
+    animation: status-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  /* ─── App Window ─── */
+  .app-window {
+    background: rgba(16, 17, 20, 0.9);
+    border: 1px solid rgba(250, 250, 250, 0.06);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow:
+      0 24px 80px -12px rgba(0, 0, 0, 0.6),
+      0 0 0 1px rgba(250, 250, 250, 0.03),
+      0 0 120px -20px rgba(59, 130, 246, 0.06);
+  }
+
+  .app-window-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.04);
+    background: rgba(22, 23, 26, 0.6);
+  }
+
+  .app-window-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  /* ─── Category Tile ─── */
+  .category-tile {
+    background: rgba(22, 23, 26, 0.4);
+    border: 1px solid rgba(250, 250, 250, 0.04);
+    border-radius: 0.5rem;
+    padding: 16px;
+    transition: border-color 0.2s ease;
+  }
+
+  .category-tile:hover {
+    border-color: rgba(250, 250, 250, 0.08);
+  }
+
+  /* ─── Network Scale ─── */
+  .network-bar {
+    background: rgba(59, 130, 246, 0.06);
+    border: 1px solid rgba(59, 130, 246, 0.22);
+    border-radius: 0.5rem;
+    box-shadow: inset 0 0 24px rgba(59, 130, 246, 0.05);
+  }
+
+  .network-category-node {
+    width: 28px;
+    height: 28px;
+    background: rgba(22, 23, 26, 0.8);
+    border: 1px solid rgba(250, 250, 250, 0.06);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @layer utilities {
-  /* Smooth transitions */
   .transition-smooth {
     transition-duration: 180ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Reduced motion support */
-  @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-    }
+  .animate-blink-slow {
+    animation: blink-slow 3s ease-in-out infinite;
+  }
+}
+
+/* ─── Keyframes (must be outside @layer) ─── */
+@keyframes flow-right {
+  0% { background-position: 0 0; }
+  100% { background-position: 16px 0; }
+}
+
+@keyframes flow-left {
+  0% { background-position: 16px 0; }
+  100% { background-position: 0 0; }
+}
+
+@keyframes flow-down {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 16px; }
+}
+
+@keyframes status-ping {
+  0% { transform: scale(1); opacity: 0.6; }
+  75%, 100% { transform: scale(2.2); opacity: 0; }
+}
+
+@keyframes blink-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes dash-flow {
+  0% { stroke-dashoffset: 12; }
+  100% { stroke-dashoffset: 0; }
+}
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal,
+  .reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }

@@ -2,18 +2,19 @@ import Container from './Container'
 
 const pillars = [
   {
-    title: 'VISIBILITY',
+    title: 'PROCUREMENT SOFTWARE',
     description:
-      "Information symmetry for industries that can't afford blind spots.",
+      'Brilliant Build coordinates equipment procurement across electrical, mechanical, and auxiliary systems for data center development programs.',
   },
   {
-    title: 'PRECISION',
+    title: 'MARKET VISIBILITY',
     description:
-      'From design to deployment — software that removes friction.',
+      'Insight into equipment availability, lead times, and vendor capacity across the data center supply chain.',
   },
   {
-    title: 'CONTINUITY',
-    description: 'Resilience engineered into every process.',
+    title: 'INDUSTRY COVERAGE',
+    description:
+      'Brilliant Media covers the projects, people, and market dynamics shaping digital infrastructure.',
   },
 ]
 

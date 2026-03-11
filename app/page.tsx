@@ -1,14 +1,12 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
-import PillarTiles from '@/components/PillarTiles'
-import Systems from '@/components/Systems'
-import Philosophy from '@/components/Philosophy'
+import Ecosystem from '@/components/Ecosystem'
+import ProductSurface from '@/components/ProductSurface'
+import NetworkScale from '@/components/NetworkScale'
 import Platforms from '@/components/Platforms'
-import Approach from '@/components/Approach'
-import Focus from '@/components/Focus'
-import Capabilities from '@/components/Capabilities'
+import Philosophy from '@/components/Philosophy'
 import Stats from '@/components/Stats'
-import JournalTeaser from '@/components/JournalTeaser'
+import EmailCapture from '@/components/EmailCapture'
 import Footer from '@/components/Footer'
 
 export default function HomePage() {
@@ -17,15 +15,13 @@ export default function HomePage() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <PillarTiles />
-        <Philosophy />
+        <Ecosystem />
+        <ProductSurface />
+        <NetworkScale />
         <Platforms />
-        <Approach />
-        <Focus />
-        <Capabilities />
+        <Philosophy />
         <Stats />
-        <Systems />
-        <JournalTeaser />
+        <EmailCapture />
       </main>
       <Footer />
     </>
